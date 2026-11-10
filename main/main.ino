@@ -1,0 +1,30 @@
+#include <Stepper.h>
+
+const int stepsPerRevolution = 2048;
+const int botaoPorta = 2;
+
+Stepper meuMotor(stepsPerRevolution, 8, 10, 9, 11);
+
+int valorBotaoAnterior = 0;
+
+void setup() {
+  Serial.begin(9600);
+  meuMotor.setSpeed(15);
+  pinMode(botaoPorta, INPUT_PULLUP); 
+}
+
+void loop() {
+  /*meuMotor.step(stepsPerRevolution);
+  delay(1000);
+
+  meuMotor.step(-stepsPerRevolution);
+  delay(1000);*/
+
+  /*meuMotor.step(40);
+  delay(100);*/
+
+  int valorBotao = digitalRead(botaoPorta);
+  if (!valorBotao and !valorBotaoAnterior) {Serial.print(1); valorBotaoAnterior = 1; meuMotor.step(60);}
+  if (valorBotao) {valorBotaoAnterior = 0;}
+  delay(1);
+}
