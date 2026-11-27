@@ -17,14 +17,14 @@ Stepper motor1(PASSOS_VOLTA, M1_P1, M1_P2, M1_P3, M1_P4);
 Stepper motor2(PASSOS_VOLTA, M2_P1, M2_P2, M2_P3, M2_P4);
 
 // Pinos dos botões
-const int PIN_BOTAO_1 = 18;
-const int PIN_BOTAO_2 = 19;
+const int PIN_BOTAO_1 = 42;
+const int PIN_BOTAO_2 = 44;
 
 // Pinos dos sensores
 const int PIN_IR_LARGADA_1 = 22;
 const int PIN_IR_LARGADA_2 = 24;
-const int PIN_IR_CHEGADA_1 = 23;
-const int PIN_IR_CHEGADA_2 = 25;
+const int PIN_IR_CHEGADA_1 = 26;
+const int PIN_IR_CHEGADA_2 = 28;
 
 // Pinos dos LEDs
 const int PIN_LED_LARGADA_1 = 30;
